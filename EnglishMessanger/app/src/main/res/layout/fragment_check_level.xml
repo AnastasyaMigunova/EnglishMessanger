@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".presentation.onboarding.testing.CheckLevelFragment">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/language_level"
+        android:textColor="@color/start_text"
+        android:textSize="36sp"
+        android:fontFamily="@font/alice_regular"
+        android:layout_marginTop="220dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageViewBook"
+        android:layout_width="224dp"
+        android:layout_height="224dp"
+        android:layout_marginTop="40dp"
+        android:src="@mipmap/icon_brainstorming_foreground"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"/>
+    
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonCheckLevel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/alice_regular"
+        android:textColor="@color/start_text"
+        android:paddingVertical="16dp"
+        android:text="@string/continue_check_level"
+        android:layout_marginTop="36dp"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/border_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewBook"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

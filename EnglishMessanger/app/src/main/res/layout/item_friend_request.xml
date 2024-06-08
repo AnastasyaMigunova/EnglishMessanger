@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewFriend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="20dp"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageViewPhoto"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginVertical="30dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/border_photo_button"
+                android:contentDescription=""
+                app:shapeAppearanceOverlay="@style/CircleImageView"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/textViewName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:fontFamily="@font/montserrat"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="36dp"
+                android:textColor="@color/start_text"
+                app:layout_constraintLeft_toRightOf="@id/imageViewPhoto"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="FirstName LastName"/>
+
+            <TextView
+                android:id="@+id/textViewDateLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/border"
+                app:layout_constraintLeft_toRightOf="@id/imageViewPhoto"
+                app:layout_constraintTop_toBottomOf="@id/textViewName"
+                tools:text="FirstName LastName"/>
+
+            <ImageView
+                android:id="@+id/imageViewAccepted"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="30dp"
+                android:src="@mipmap/icon_checkmark_foreground"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="" />
+
+            <ImageView
+                android:id="@+id/imageViewRejection"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="14dp"
+                android:src="@mipmap/icon_close_foreground"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageViewAccepted"
+                android:contentDescription="" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

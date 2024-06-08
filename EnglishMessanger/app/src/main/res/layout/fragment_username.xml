@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    tools:context=".presentation.onboarding.UsernameFragment">
+
+   <TextView
+       android:id="@+id/textView"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/your_username"
+       android:textColor="@color/start_text"
+       android:textSize="36sp"
+       android:fontFamily="@font/alice_regular"
+       android:layout_marginTop="250dp"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintRight_toRightOf="parent"
+       app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:hint="@string/edit_text_username"
+        android:textSize="22sp"
+        android:padding="16dp"
+        android:layout_marginHorizontal="20dp"
+        android:fontFamily="@font/montserrat"
+        android:textColorHint="@color/border"
+        android:background="@drawable/border_edit_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

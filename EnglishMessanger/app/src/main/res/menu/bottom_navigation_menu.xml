@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home"
+        app:showAsAction="always"
+        android:icon="@mipmap/icon_home_foreground"
+        android:title="Профиль"/>
+
+    <item
+        android:id="@+id/chats"
+        app:showAsAction="always"
+        android:icon="@mipmap/icon_chats_foreground"
+        android:title="Чаты"/>
+
+    <item
+        android:id="@+id/dictionary"
+        app:showAsAction="always"
+        android:icon="@mipmap/icon_book_foreground"
+        android:title="Словарь"/>
+
+    <item
+        android:id="@+id/exercises"
+        app:showAsAction="always"
+        android:icon="@mipmap/icon_exercises_foreground"
+        android:title="Обучение"/>
+</menu>

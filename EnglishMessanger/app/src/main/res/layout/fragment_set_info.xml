@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_profile"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.user.main_exercises.cards.sets.set_info.SetInfoFragment">
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:drawableStart="@drawable/ic_back"
+        android:drawablePadding="8dp"
+        android:padding="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/textViewSetTitle"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        android:fontFamily="@font/montserrat"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/start_text"
+        tools:text="Базовые глаголы"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonBack"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCardSets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        tools:listitem="@layout/item_set_horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonCards"
+        app:layout_constraintTop_toBottomOf="@id/textViewSetTitle"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonCards"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/text_cards"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/start_text"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:paddingVertical="16dp"
+        android:background="@drawable/border_button"
+        app:layout_constraintTop_toBottomOf="@id/recyclerViewCardSets"
+        app:layout_constraintBottom_toTopOf="@id/buttonTest"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/test"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/start_text"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:paddingVertical="16dp"
+        android:background="@drawable/border_button"
+        app:layout_constraintBottom_toTopOf="@id/buttonMatch"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonMatch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/match"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/start_text"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:paddingVertical="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border_button"
+        app:layout_constraintTop_toBottomOf="@id/buttonTest"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

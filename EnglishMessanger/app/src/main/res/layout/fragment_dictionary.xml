@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_profile"
+    tools:context=".presentation.user.dictionary.DictionaryFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewChangeLanguage"
+        android:layout_width="240dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="20dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextSearch">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="10dp"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewEngRus"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toTopOf="@id/cardViewRusEng"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/eng_rus"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/start_text"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewRusEng"
+                android:layout_width="match_parent"
+                app:cardCornerRadius="20dp"
+                android:layout_height="40dp"
+                app:layout_constraintTop_toBottomOf="@id/cardViewEngRus">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rus_eng"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/start_text"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center" />
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageViewBlob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/profile_blue_blob"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewDictionary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="68dp"
+        android:text="@string/dictionary"
+        android:fontFamily="@font/montserrat"
+        android:textStyle="bold"
+        android:textColor="@color/background_profile"
+        android:textSize="36sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/border"
+        android:hint="@string/search"
+        android:fontFamily="@font/montserrat"
+        android:padding="16dp"
+        android:textColor="@color/background_profile"
+        android:textColorHint="@color/start_text"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/imageViewBlob" />
+
+    <ImageView
+        android:id="@+id/imageViewSearch"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:src="@mipmap/icon_search_foreground"
+        app:layout_constraintRight_toRightOf="@id/editTextSearch"
+        app:layout_constraintTop_toTopOf="@id/editTextSearch" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewDictionaryWords"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextSearch"
+        tools:listitem="@layout/item_word" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
